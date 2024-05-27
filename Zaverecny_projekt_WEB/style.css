@@ -1,0 +1,800 @@
+/*Obecné*/
+.body {
+    font-family: 'Roboto';
+    line-height: 1.5;
+    margin:0;
+    overflow-x: hidden;
+}
+.body--gray {
+    background-color: #f7f7ff;
+}
+h1 {
+    font-size: 6em;
+    margin: -0.2em 0;
+}
+.font-size-2em{
+    font-size: 2em;
+    margin: 0;
+}
+.bold {
+    font-weight: 900;
+}
+.small-font {
+    font-size: 0.9em;
+}
+.orange {
+    color:#ff9301;
+}
+.black {
+    color:#0b0b15;
+}
+.gray {
+    color: #555555;
+}
+.title {
+    margin-left: -0.3em ;
+}
+.title__background {
+    background-color: rgba(255,147,1,0.5);
+    max-width: 1em;
+    max-height: 1em;
+    border-radius: 50%;
+    white-space: nowrap;
+    padding: 0.2em 0.2em 0.3em 0.3em;
+}
+/*Header*/
+.header {
+    margin:0 auto;
+    padding: 0 4vw;
+    max-width: 1140px;
+}
+.header__overflow {
+    overflow:hidden;
+}
+.header__JaneDoe{
+    grid-area: JaneDoe;
+    color: #0b0b15;
+    padding:4vw 0; 
+}
+/*Navigace */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    gap: 0.5em;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-around;
+    grid-template-columns: auto auto auto ;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "biography what-i-do awards"
+    "experience my-portfolio contact";
+}
+.nav-list__items__background {
+    background-color: #ff9301;
+    border-radius: 0.3em;
+    width: 100%;
+    text-align: center;
+    padding: 0.5em 1em;
+}
+.nav-list__items {
+    text-decoration: none;
+    color: #0b0b15;
+}
+/*Biography*/
+.biography {
+    max-width: 1140px;
+    padding: 4vw;
+    margin:0 auto 0 auto;
+}
+.biography__inner {
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "biograpy__figure"
+    "biography__text";
+    margin:2em 0 0 0;
+}
+.biography__figure {
+    display: flex;
+    flex-flow: column;
+    padding:0 3em 0 0;
+}
+.biography__photo {
+    content: url(avatar2.svg);  
+    max-width: 12em;
+    max-height: 12em;
+    background: #ff9301;
+    border-radius: 50%;
+    align-self: center;
+}
+.biography__photo__caption {
+    text-align: center;
+}
+.biography__waves {
+    display: flex;
+    padding-top: 4vw;
+    max-width: 1140px;
+}
+.biography__wave {
+    content: url(border-dark.png);
+    max-width: 20%;
+}
+/*What I do*/
+.what-i-do {
+    max-width: 1140px;
+    padding: 0 4vw 4vw 4vw;
+    margin:0 auto 0 auto;
+}
+.what-i-do__inner {
+    display: flex;
+    flex-flow: column;
+}
+.what-i-do__item {
+    margin: 1em 0;
+    width: auto;
+    background-color: #ffffff;
+    padding: 0 1em 1em 0;
+    border-radius: 1em;
+    overflow: hidden;
+}
+.what-i-do__image-pencil {
+    content: url(pencil-alt-solid.svg);
+    padding:1em 1em 1em 1em;
+    max-width: 5em;
+    max-height: 5em;
+    position: relative;
+    top: 5em;
+    left: 3em;
+}
+.what-i-do__image-desktop {
+    content: url(desktop-solid.svg);
+    padding:1em 1em 1em 1em;
+    max-width: 5em;
+    max-height: 5em;
+    position: relative;
+    top: 5em;
+    left: 3em;
+}
+.what-i-do__image-bullseye {
+    content: url(bullseye-solid.svg);
+    padding:1em 1em 1em 1em;
+    max-width: 5em;
+    max-height: 5em;
+    position: relative;
+    top: 5em;
+    left: 3em;
+}
+.what-i-do__image-background {
+    background-color: #ff9301;
+    width: 13em;
+    height: 13em;
+    border-radius: 50%;
+    position: relative;
+    right: 2em;
+    top: -5em
+}
+.what-i-do__description {
+    padding:0 0 0 1em;
+}
+/*Awards*/
+.awards {
+    max-width: 1140px;
+    padding: 0 4vw 4vw 4vw;
+    margin:0 auto 0 auto;
+}
+.awards__inner {
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+}
+.awards__item {
+    background-color: white;
+    border-radius: 10%;
+    flex-grow: 1;
+    padding: 1em;
+    margin: 0;
+    display:flex;
+    flex-flow: row;
+}
+.awards__item__photo {
+    content:url(trophy-solid.svg);
+    max-width: 3em;
+    max-height:3em;
+    margin-right:1em;
+}
+.awards__item__text {
+    padding:auto 0;
+}
+/*Experience*/
+.experience {
+    max-width: 1140px;
+    padding: 4vw;
+    margin:0 auto 0 auto;
+}
+.experience__block {
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "experience__block__time"
+    "experience__block__job-description";
+    background-color: #f7f7ff;
+    border-radius: 1em;
+    margin:1em 0;
+    padding: 2em;
+}
+.experience__block__time {
+    margin:auto 4vw auto 0;
+}
+.experience__block__time__full-time {
+    background-color: #ff9301;
+    border-radius: 0.3em;
+    padding:0.3em;
+    width: fit-content;
+    color: #ffffff;
+}
+.experience__block__time__part-time {
+    background-color: #555555;
+    border-radius: 0.3em;
+    padding:0.3em;
+    width: fit-content;
+    color: #ffffff;
+}
+/*My portfolio*/
+.my-portfolio {
+    max-width: 1140px;
+    padding: 0 4vw 4vw 4vw;
+    margin:0 auto 0 auto;
+}
+.my-portfolio__inner {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+    "my-portfolio__item"
+    "my-portfolio__item"
+    "my-portfolio__item"
+    "my-portfolio__item"
+    "my-portfolio__item"
+    "my-portfolio__item";
+}
+.my-portfolio__item {
+    margin:0 0 1em 0;
+}
+.my-portfolio__item-title {
+    margin:0;
+}
+.my-portfolio__img {
+    max-width: 100%;
+    max-height: 100%;
+}
+/*Contact*/
+.contact{
+    max-width: 1140px;
+    padding: 4vw;
+    margin:0 auto 0 auto;
+    border-bottom:1px solid #eeeeee;
+}
+.contact__inner {
+    display: flex;
+    flex-flow: column;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap: 4vw;
+}
+.contact-grid__whats-your-story {
+    display: grid;
+    grid-template-columns: 3em auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+    "whats-your-story whats-your-story"
+    "always-avaiable always-avaiable"
+    "marker address"
+    "envelope email"
+    "phone number";
+}
+.contact-grid__whats-your-story__whats-your-story{
+    grid-area: whats-your-story;
+    margin:0;
+}
+.contact-grid__whats-your-story__always-avaiable{
+    grid-area: always-avaiable;
+}
+.contact-grid__whats-your-story__icon-marker {
+    content: url(map-marker-alt-solid.svg);
+    max-width: 2em;
+    max-height: 2em;
+    margin: 0.5em 0 0 0.3em;
+}
+.contact-grid__whats-your-story__icon-envelope {
+    content: url(envelope-regular.svg);
+    max-width: 2em;
+    max-height: 2em;
+    margin: 0.5em 0 0 0;
+}
+.contact-grid__whats-your-story__icon-phone {
+    content: url(mobile-alt-solid.svg);
+    max-width: 2em;
+    max-height: 2em;
+    margin: 0.5em 0 0 0.4em;
+}
+.contact-grid__say-something {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    gap:1em;
+    margin:0 0 1em 0;
+    grid-template-areas:
+    "say-something say-something say-something say-something"
+    "full-name full-name full-name full-name" 
+    "email-address email-address email-address email-address"
+    "subject subject subject subject"
+    "comment comment comment comment"
+    "comment comment comment comment"
+    "send-button . . . ";
+}
+.contact-grid__say-something__item{
+    color:#bbbbbb;
+    border: 1px solid #bbbbbb;
+    padding: 10px;
+    font-family: inherit;
+}
+.contact-grid__say-something__say-something{
+    grid-area: say-something;
+    margin:0;
+    width: max-content;
+}
+.contact-grid__say-something__full-name{
+    grid-area: full-name;
+}
+.contact-grid__say-something__email-address{
+    grid-area: email-address;
+}
+.contact-grid__say-something__subject{
+    grid-area: subject;
+}
+.contact-grid__say-something__comment{
+    grid-area: comment;
+}
+.contact-grid__say-something__send-button{
+    grid-area: send-button;
+    background-color: black;
+    width: fit-content;
+    color: white;
+    border-radius: 0.3em;
+    border:0;
+    padding:10px;
+    font-family: inherit;
+}
+.contact__map{
+    width:100%;
+    height:auto; 
+    border:3px solid white;
+}
+.contact__underline {
+    border:solid #eeeeee;
+    border-width: 0 0 1px 0;
+}
+/*Footer*/
+.footer {
+    max-width: 1140px;
+    margin:1em auto;
+    padding: 0 4vw;
+}
+.footer__inner{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    max-height: 3em;
+}
+.footer__icon-flexbox {
+    display: flex;
+    justify-content: center;
+}
+.footer__icon-TW {
+    content: url(twitter-square-brands.svg);
+    display: block;
+    max-width:2em;
+    max-height:2em;
+    margin-right:1em;
+}
+.footer__icon-FB {
+    content: url(facebook-square-brands.svg);
+    max-width:2em;
+    max-height:2em;
+    display: block;
+}
+.footer__copyright {
+    text-align: center;
+    margin:0;
+}
+@media screen and (min-width:560px) and (max-width:959px) {
+    /*Header*/
+    /*Navigation*/
+    .nav-list {
+        display:inline;
+    }
+    .nav-list__items {
+        color:#555555;
+        padding: 0;
+        margin-right: 1em;
+    }
+    .nav-list__items__background {
+        background-color: transparent;
+        display:inline;
+        padding: 0;
+    }
+    .nav-list__items:hover {
+        border-bottom: 3px solid #ff9301;
+    }
+    /*Biography*/
+    .biography__inner {
+        display:grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "biograpy__figure"
+        "biography__text";
+    }
+    /*What I do?*/
+    .what-i-do__inner {
+        display: flex;
+        flex-flow: column;
+    }
+    /*Awards*/
+    .awards__inner {
+        display:flex;
+        flex-flow: row;
+        gap:0;
+    }
+    .awards__item--inner {
+        margin:0 1em 1em 0;
+    }
+    .awards__item {
+        flex-flow: column;
+    }
+    .awards__item__photo{
+        margin:0 auto;
+    }
+    .awards__item__text {
+        text-align: center;
+        padding:0;
+        margin-bottom: 0;
+    }
+    /*Experience*/
+    .experience__block {
+        display:grid;
+        grid-template-columns: auto auto ;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "experience__block__time experience__block__job-description";
+    }
+    .experience__block__job-description {
+        padding:0 0 0 1em;
+        border: solid #eeeeee;
+        border-width: 0 0 0 1px;
+    }
+    /*My portfolio*/
+    .my-portfolio__inner {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        justify-content: center;
+        grid-template-areas:
+        "my-portfolio__item my-portfolio__item"
+        "my-portfolio__item my-portfolio__item"
+        "my-portfolio__item my-portfolio__item";
+    }
+    .my-portfolio__item {
+        margin:0 1em 1em 0;
+    }
+    .my-portfolio__item--last {
+        margin:0 0 1em 0;
+    }
+    /*Contact*/
+    .contact-grid__say-something {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        gap:1em;
+        padding:0 0 1em 0;
+        grid-template-areas:
+        "say-something say-something say-something say-something"
+        "full-name full-name email-address email-address"
+        "subject subject subject subject"
+        "comment comment comment comment"
+        "comment comment comment comment"
+        "send-button . . . ";
+    }
+    /*Footer*/
+    .footer__inner{
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    .footer__icon-flexbox {
+        justify-content: flex-start;
+        margin-bottom: 0;
+    }
+}
+@media screen and (min-width:960px) and (max-width:1199px) {
+    /*Header*/
+    .header {
+        overflow: hidden;
+        display:grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "JaneDoe JaneDoe-Photo";
+    }
+    .header__JaneDoe-photo {
+        content: url(avatar2.svg);
+        max-width: 100%;
+        max-height: 100%;
+        z-index: 1;
+        padding-left: 5em;
+    }
+    .header__JaneDoe-photo__background {
+        background-color: rgba(255,147,1,0.5);
+        position: absolute;
+        border-radius: 50%;
+        width: 55vw;
+        height: 55em;
+        right: -10em;
+        top: -20em;
+        z-index: -1;
+    }
+    /*Navigation*/
+    .nav-list {
+        display:inline;
+    }
+    .nav-list__items {
+        color:#555555;
+        padding: 0;
+        margin-right: 0.5em;
+    }
+    .nav-list__items__background {
+        background-color: transparent;
+        display:inline;
+        padding: 0;
+    }
+    .nav-list__items:hover {
+        border-bottom: 3px solid #ff9301;
+    }
+    /*Biography*/
+    .biography__inner {
+        display:grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "biograpy__figure biography__text";
+    }
+    .biography__figure {
+        margin-right: 3em;
+    }
+    /*What I do?*/
+    .what-i-do__inner {
+        display: flex;
+        flex-flow: row;
+    }
+    .what-i-do__item--inner {
+        margin: 1em 1em 1em 0;
+    }
+    /*Awards*/
+    .awards__inner {
+        display:flex;
+        flex-flow: row;
+        gap:0;
+    }
+    .awards__item--inner {
+        margin:0 1em 1em 0;
+    }
+    .awards__item {
+        flex-flow: column;
+    }
+    .awards__item__photo{
+        margin:0 auto;
+    }
+    .awards__item__text {
+        text-align: center;
+        padding:0;
+        margin-bottom: 0;
+    }
+    /*Experience*/
+    .experience__block {
+        display:grid;
+        grid-template-columns: auto auto ;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "experience__block__time experience__block__job-description";
+    }
+    .experience__block__job-description {
+        padding:0 0 0 1em;
+        border: solid #eeeeee;
+        border-width: 0 0 0 1px;
+    }
+    /*My Portfolio*/
+    .my-portfolio__inner {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        grid-template-areas:
+        "my-portfolio__item my-portfolio__item my-portfolio__item"
+        "my-portfolio__item my-portfolio__item my-portfolio__item";
+    }
+    .my-portfolio__item--inner {
+        margin:0 1em 1em 0;
+    }
+    /*Contact*/
+    .contact-grid__say-something {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas:
+        "say-something say-something say-something say-something"
+        "full-name full-name email-address email-address"
+        "subject subject subject subject"
+        "comment comment comment comment"
+        "comment comment comment comment"
+        "send-button . . . ";
+    }
+    .contact__inner {
+        display: flex;
+        flex-flow: row;
+        justify-content:space-between;
+        gap: 4vw;
+        align-items:center;
+    }
+    /*Footer*/
+    .footer__inner{
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    .footer__icon-flexbox {
+        justify-content: flex-start;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    /*Header*/
+    .header {
+        overflow: hidden;
+        display:grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "JaneDoe JaneDoe-Photo";
+    }
+    .header__JaneDoe-photo {
+        content: url(avatar2.svg);
+        max-width: 100%;
+        max-height: 100%;
+        z-index: 1;
+        padding-left: 10em;
+    }
+    .header__JaneDoe-photo__background {
+        background-color: rgba(255,147,1,0.5);
+        position: absolute;
+        border-radius: 50%;
+        width: 55vw;
+        height: 55em;
+        right: -10em;
+        top: -20em;
+        z-index: -1;
+    }
+    /*Navigation*/
+    .nav-list {
+        display:inline;
+    }
+    .nav-list__items {
+        color:#555555;
+        padding: 0;
+        margin-right: 1em;
+    }
+    .nav-list__items__background {
+        background-color: transparent;
+        display:inline;
+        padding: 0;
+    }
+    .nav-list__items:hover {
+        border-bottom: 3px solid #ff9301;
+    }
+    /*Biography*/
+    .biography__inner {
+        display:grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "biograpy__figure biography__text";
+    }
+    .biography__figure {
+        margin-right: 3em;
+    }
+    /*What I do?*/
+    .what-i-do__inner {
+        display: flex;
+        flex-flow: row;
+    }
+    .what-i-do__item--inner {
+        margin: 1em 1em 1em 0;
+    }
+    /*Awards*/
+    .awards__inner {
+        display:flex;
+        flex-flow: row;
+        gap:0;
+    }
+    .awards__item--inner {
+        margin:0 1em 1em 0;
+    }
+    .awards__item {
+        flex-flow: column;
+    }
+    .awards__item__photo{
+        margin:0 auto;
+    }
+    .awards__item__text {
+        text-align: center;
+        padding:0;
+        margin-bottom: 0;
+    }
+    /*Experience*/
+    .experience__block {
+        display:grid;
+        grid-template-columns: auto auto ;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "experience__block__time experience__block__job-description";
+    }
+    .experience__block__job-description {
+        padding:0 0 0 1em;
+        border: solid #eeeeee;
+        border-width: 0 0 0 1px;
+    }
+    /*My Portfolio*/
+    .my-portfolio__inner {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        justify-content: center;
+        grid-template-areas:
+        "my-portfolio__item my-portfolio__item my-portfolio__item"
+        "my-portfolio__item my-portfolio__item my-portfolio__item";
+    }
+    .my-portfolio__item--inner {
+        margin:0 1em 1em 0;
+    }
+    /*Contact*/
+    .contact-grid__say-something {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas:
+        "say-something say-something say-something say-something"
+        "full-name full-name email-address email-address"
+        "subject subject subject subject"
+        "comment comment comment comment"
+        "comment comment comment comment"
+        "send-button . . . ";
+    }
+    .contact__inner {
+        display: flex;
+        flex-flow: row;
+        justify-content:space-between;
+        gap: 4vw;
+        align-items:center;
+    }
+    /*Footer*/
+    .footer__inner{
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    .footer__icon-flexbox {
+        justify-content: flex-start;
+        margin-bottom: 0;
+    }
+} 

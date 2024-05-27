@@ -1,0 +1,22 @@
+.bunka {
+    border: 1px solid black;
+    width: 3em;
+    padding: 1em;
+    text-align: center;
+}
+.cities {
+    background-color: #1a1a00;
+    color: white;
+    text-align: left;
+    padding: 1em;
+}
+.first_column {
+    width: 5em;
+    text-align: left;
+}
+.third_fifth_column {
+    background-color: ivory;
+}
+.foot {
+    padding-top: 1em;
+}
